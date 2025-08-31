@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistri Dost AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Mistri Dost 🤖</h1>
+            <div class="mode-switcher">
+                <span>Text Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Voice Mode</span>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="message bot-message">
+                    <p>Hello! I am your workshop assistant. Switch to Voice Mode for a hands-free conversation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input" id="text-input-mode">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button id="send-btn">➤</button>
+        </div>
+
+        <div class="voice-input" id="voice-input-mode">
+            <div class="mic-container" id="mic-container">
+                <div class="mic-pulse"></div>
+                <button id="mic-btn">🎤</button>
+            </div>
+            <p id="voice-status">Tap the mic to start the conversation</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
